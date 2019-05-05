@@ -1,5 +1,9 @@
 public class GCDOfArrayofNumbers {
 
+    private static int findGCD(int[] arr){
+        return computeGCD(findLeastDifference(arr, arr.length), arr);
+    }
+
     private static int computeGCD(int leastDiff, int arr[]){
         if(leastDiff == 1){
             return leastDiff;
@@ -31,8 +35,7 @@ public class GCDOfArrayofNumbers {
     public static void main(String[] args)
     {
         int arr[] = { 8, 20, 28, 44 };
-        int n = arr.length;
-        System.out.println(findLeastDifference(arr, n));
-        System.out.println(computeGCD(findLeastDifference(arr, n), arr));
+
+        System.out.println(findGCD(arr));
     }
 }
